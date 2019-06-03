@@ -1,8 +1,7 @@
 """
 Дан массив целых чисел. Написать функцию, которая определяет, содержит
 ли массив какие-либо дубликаты. Возвращает True если содержит дубликаты,
-и возвращает False, если не содержит. В массиве могут быть данные
-типов False или True.
+и возвращает False, если не содержит. В массиве могут быть данные False или True.
 """
 
 # Если
@@ -25,7 +24,7 @@
 # то
 #   contains_duplicates(example_list) = False
 
-def contains_duplicates(example_list):
+def contains_duplicates(example_list: list) -> bool:
     id_list = [id(i) for i in example_list]
     return len(set(id_list)) != len(example_list)
 
